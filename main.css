@@ -1,0 +1,153 @@
+/* Basic Page Styling */
+
+body {
+  background-color: white;
+  max-width: 100%;
+}
+
+a:visited {
+  color: blue;
+}
+
+/* Navigation Styling */
+
+nav {
+  background-color: #FFB4B0;
+  border: .2em solid black;
+  width: 57%;
+  margin: 1% auto;
+  padding-bottom: 3.5%;
+  padding-right: .25%;
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+nav ul {
+  padding-left: 0%;
+  display: inline;
+}
+
+.navMid {
+  border-left: .1em solid black;
+  border-right: .1em solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav li {
+  list-style-type: none;
+  float: left;
+  margin: 1% -1% 1% 1%;
+  padding: 1.25% .5% 1% .75%;
+}
+
+.navSep { 
+  padding:0px 10px;
+  font-size: 20px;
+}
+
+/* Feeble attempt to keep Main Content in order */
+
+.mainContent {
+  width: 80%;
+  display: inline;
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+/* Filter Specific Styling */
+
+.filter {
+  background-color: #4DD7FA;
+  float: left;
+  border: .2em solid black;
+  margin-left: 21.5%;
+  width: 16%;
+  margin-right: auto;
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+.filterShift{
+  margin-left: 5%;
+  max-width: 100%;
+}
+
+select {
+  display: block;
+  width:95%;
+}
+
+.range {
+  display: block;
+  width: 95%;
+}
+
+.checkbox
+{
+  width:85%;
+}
+
+.checkbox li
+{
+  margin-left: -8%; 
+  margin-right: 0%; 
+  overflow: auto;
+  display:inline-block;
+  width:43%;
+
+}
+
+/* Song List Specific Styling */
+
+.songList {
+  background-color: #FEFAC0;
+  border: .2em solid black;  
+  float: right;
+  width: 40%;
+  margin-right: 21.5%;
+  margin-left: auto;
+  padding-top: 1.6599%;
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+.songList a {
+  font-size: 2em;
+  text-decoration: none;
+  color: #785616;
+}
+
+.song {
+  margin-left: 2.5%;
+}
+
+/* Filter Button */
+
+.filter a {
+  border: .2em solid black;
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  width: 40%;
+  margin: 2.5% 25%;
+}
+
+.songMid {
+  border-right:.1em solid black;
+  border-left:.1em solid black;
+  padding-right: 1%;
+  padding-left:1%;
+  margin:1%;
+}
+
+.songInfo li {
+  list-style-type: none;
+  display: inline;
+  margin-left: -4.5%;
+  margin-right: 5%;
+}
