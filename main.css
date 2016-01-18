@@ -1,153 +1,167 @@
-/* Basic Page Styling */
+/* ---- General Styling ---- */
 
-body {
-  background-color: white;
-  max-width: 100%;
-}
-
-a:visited {
-  color: blue;
-}
-
-/* Navigation Styling */
-
-nav {
-  background-color: #FFB4B0;
-  border: .2em solid black;
-  width: 57%;
-  margin: 1% auto;
-  padding-bottom: 3.5%;
-  padding-right: .25%;
-  box-sizing: content-box;
+* {
   box-sizing: border-box;
+}
+body {
+  font-size: 1.35em;
+  font-family: 'Varela Round', sans-serif;
+  color: #000;
+  background: #fff;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 80%;
+  margin: auto;
+}
+
+/* ---- Nav Specific Styling ---- */
+
+.nav {
+  border:2px solid #b27f87;
+  padding: 10px;
+  background: #FFB4B0;
+  border-radius: 10px;
+}
+.navItem {
+  border:2px solid #b27f87;
+  color: #fff;
+  padding: 6.5px 15px 15px 15px;
+  margin: 5px;  
+  background: #ffe1df;
+  border-radius: 10px;
 }
 
 nav ul {
-  padding-left: 0%;
-  display: inline;
-}
-
-.navMid {
-  border-left: .1em solid black;
-  border-right: .1em solid black;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-bottom: none;
 }
 
 nav li {
   list-style-type: none;
-  float: left;
-  margin: 1% -1% 1% 1%;
-  padding: 1.25% .5% 1% .75%;
 }
 
-.navSep { 
-  padding:0px 10px;
-  font-size: 20px;
+nav a {
+  color: black;
+  text-decoration: none;
 }
 
-/* Feeble attempt to keep Main Content in order */
+/*---- Container for Main Columns ---- */
 
 .mainContent {
-  width: 80%;
-  display: inline;
-  box-sizing: content-box;
-  box-sizing: border-box;
+  width: 100%;
 }
 
-/* Filter Specific Styling */
+/* ---- Left Main Column Styling */
 
 .filter {
-  background-color: #4DD7FA;
-  float: left;
-  border: .2em solid black;
-  margin-left: 21.5%;
-  width: 16%;
-  margin-right: auto;
-  box-sizing: content-box;
-  box-sizing: border-box;
+  border: 2px solid #3dacc8;
+  padding: 10px;
+  background: #4DD7FA;
+  border-radius: 10px;
+  margin: 45px auto;
+  width: 30%;
+  margin-top:5px;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
 }
 
-.filterShift{
-  margin-left: 5%;
-  max-width: 100%;
-}
-
-select {
-  display: block;
-  width:95%;
+.filterItem {
+  border: 2px solid #3dacc8;
+  color: #000;
+  font-size: .70em;
+  padding: 1px 1px 1px 1px;
+  margin: 1px;  
+  background: #b7effd;
+  border-radius: 10px;
+  width: 90%;
 }
 
 .range {
-  display: block;
   width: 95%;
+  margin:2.5%;
 }
 
-.checkbox
-{
-  width:85%;
+.filterItem p {
+  border: 2px solid #3dacc8;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 50%;
+  text-align: center;
+  margin:  2.5% auto;
 }
 
-.checkbox li
-{
-  margin-left: -8%; 
-  margin-right: 0%; 
-  overflow: auto;
-  display:inline-block;
-  width:43%;
-
+.filterItem select {
+  width: 90%;
+  margin: 5%;
 }
 
-/* Song List Specific Styling */
+.filterItem a {
+  color: black;
+  text-decoration: none;
+}
+
+.filterItem li {
+  list-style-type: none;
+  margin-left: 12%;
+}
+
+/* ---- Checkbox Items ----*/
+
+.cbItem {
+  align-self: baseline;
+  margin:auto;
+}
+
+/* ---- Right Main Column Styling ---- */
 
 .songList {
-  background-color: #FEFAC0;
-  border: .2em solid black;  
-  float: right;
-  width: 40%;
-  margin-right: 21.5%;
-  margin-left: auto;
-  padding-top: 1.6599%;
-  box-sizing: content-box;
-  box-sizing: border-box;
-}
-
-.songList a {
-  font-size: 2em;
-  text-decoration: none;
-  color: #785616;
+  border: 2px solid #785616;
+  padding: 10px;
+  background: #FEFAC0;
+  border-radius: 10px;
+  margin: 45px auto;
+  margin-top:5px;
+  -webkit-flex: 2 0 0; 
+  flex: 2 0 0; 
 }
 
 .song {
-  margin-left: 2.5%;
+  border: 2px solid #785616;
+  border-radius: 10px;
+  background-color: #fefde5;
+  height: 90px;
 }
 
-/* Filter Button */
+.songList a {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #785616;
+  margin: auto;
+}
+
+.songInfo {
+  border: 2px solid #785616;
+  font-size: .80em;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  list-style-type: none;
+  width: 90%;
+  height: 30px;
+  align-self: baseline;
+  margin: auto;
+}
+
+/* ---- Filter Button ----*/
 
 .filter a {
-  border: .2em solid black;
-  padding: 1.5% 3%;
+  border: .1em solid black;
   border-radius: 10px;
   background-color: #f0f0f0;
   text-decoration: none;
   color: black;
   text-align: center;
   display: block;
-  width: 40%;
-  margin: 2.5% 25%;
-}
-
-.songMid {
-  border-right:.1em solid black;
-  border-left:.1em solid black;
-  padding-right: 1%;
-  padding-left:1%;
-  margin:1%;
-}
-
-.songInfo li {
-  list-style-type: none;
-  display: inline;
-  margin-left: -4.5%;
-  margin-right: 5%;
+  width: 60%;
+  height: 30px;
+  margin-top: 5%;
 }
