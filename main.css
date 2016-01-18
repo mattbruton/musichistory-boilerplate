@@ -8,9 +8,8 @@ body {
   font-family: 'Varela Round', sans-serif;
   color: #000;
   background: #fff;
-  padding-left: 5%;
-  padding-right: 5%;
   width: 80%;
+  padding: 0% 5%;
   margin: auto;
 }
 
@@ -68,7 +67,7 @@ nav a {
   border: 2px solid #3dacc8;
   color: #000;
   font-size: .70em;
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   margin: 1px;  
   background: #b7effd;
   border-radius: 10px;
@@ -107,7 +106,6 @@ nav a {
 /* ---- Checkbox Items ----*/
 
 .cbItem {
-  align-self: baseline;
   margin:auto;
 }
 
@@ -147,7 +145,6 @@ nav a {
   list-style-type: none;
   width: 90%;
   height: 30px;
-  align-self: baseline;
   margin: auto;
 }
 
