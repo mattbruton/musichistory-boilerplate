@@ -1,0 +1,59 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: columns;
+  height: 75px;
+  margin-bottom: 0%;
+  margin-top: 5%;
+}
+
+.mainContent {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: columns;
+  justify-content: space-around;
+  height: 500px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: rows;
+  height: 500px;
+  justify-content: center;
+  margin-right: 1%;
+}
+
+.songList {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-around;
+}
+
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column-reverse;
+  align-content: stretch;
+  justify-content: space-around;
+  height: 75px;
+  padding-left: 0px;
+}
+
+.song {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  height: 90px;
+  padding-left: 0px;
+}
+
+.songInfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: space-around;
+  padding-left: 0px;
+}

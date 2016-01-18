@@ -1,0 +1,167 @@
+/* ---- General Styling ---- */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.35em;
+  font-family: 'Varela Round', sans-serif;
+  color: #000;
+  background: #fff;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 80%;
+  margin: auto;
+}
+
+/* ---- Nav Specific Styling ---- */
+
+.nav {
+  border:2px solid #b27f87;
+  padding: 10px;
+  background: #FFB4B0;
+  border-radius: 10px;
+}
+.navItem {
+  border:2px solid #b27f87;
+  color: #fff;
+  padding: 6.5px 15px 15px 15px;
+  margin: 5px;  
+  background: #ffe1df;
+  border-radius: 10px;
+}
+
+nav ul {
+  margin-bottom: none;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/*---- Container for Main Columns ---- */
+
+.mainContent {
+  width: 100%;
+}
+
+/* ---- Left Main Column Styling */
+
+.filter {
+  border: 2px solid #3dacc8;
+  padding: 10px;
+  background: #4DD7FA;
+  border-radius: 10px;
+  margin: 45px auto;
+  width: 30%;
+  margin-top:5px;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+}
+
+.filterItem {
+  border: 2px solid #3dacc8;
+  color: #000;
+  font-size: .70em;
+  padding: 1px 1px 1px 1px;
+  margin: 1px;  
+  background: #b7effd;
+  border-radius: 10px;
+  width: 90%;
+}
+
+.range {
+  width: 95%;
+  margin:2.5%;
+}
+
+.filterItem p {
+  border: 2px solid #3dacc8;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 50%;
+  text-align: center;
+  margin:  2.5% auto;
+}
+
+.filterItem select {
+  width: 90%;
+  margin: 5%;
+}
+
+.filterItem a {
+  color: black;
+  text-decoration: none;
+}
+
+.filterItem li {
+  list-style-type: none;
+  margin-left: 12%;
+}
+
+/* ---- Checkbox Items ----*/
+
+.cbItem {
+  align-self: baseline;
+  margin:auto;
+}
+
+/* ---- Right Main Column Styling ---- */
+
+.songList {
+  border: 2px solid #785616;
+  padding: 10px;
+  background: #FEFAC0;
+  border-radius: 10px;
+  margin: 45px auto;
+  margin-top:5px;
+  -webkit-flex: 2 0 0; 
+  flex: 2 0 0; 
+}
+
+.song {
+  border: 2px solid #785616;
+  border-radius: 10px;
+  background-color: #fefde5;
+  height: 90px;
+}
+
+.songList a {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #785616;
+  margin: auto;
+}
+
+.songInfo {
+  border: 2px solid #785616;
+  font-size: .80em;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  list-style-type: none;
+  width: 90%;
+  height: 30px;
+  align-self: baseline;
+  margin: auto;
+}
+
+/* ---- Filter Button ----*/
+
+.filter a {
+  border: .1em solid black;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  width: 60%;
+  height: 30px;
+  margin-top: 5%;
+}
