@@ -10,4 +10,4 @@
 
 ### Screenshots:
 
-![]()
+![Screenshot of Music History, Part 1](https://raw.githubusercontent.com/mattbruton/musichistory-boilerplate/master/Screenshots/MusicHistorySS.png)
