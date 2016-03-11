@@ -8,12 +8,12 @@
 <body>
   <nav>
     <ul class="nav">
-      <li class="navItem"><a href="#">View Music</a></li>
-      <li class="navItem"><a href="#">Add Music</a></li>
+      <li class="navItem" id="listBtn"><a href="#">List Music</a></li>
+      <li class="navItem" id="addBtn"><a href="#">Add Music</a></li>
       <li class="navItem"><a href="#">Profile</a></li>
     </ul>
   </nav>
-  <div class="mainContent">
+  <div class="mainContent" id="mainContent">
     <div class="filter" class="mainItem">
           <form class="filterItem">
             <p>Song length:</p>
@@ -89,5 +89,21 @@
           </div>
         </div>
   </div>
+  <div class="addSongs" id="addSongs">
+    <div class="labelInput">
+      <label for="artist">Artist:</label>
+      <input type="text" name="artist" id="artist"></input>
+    </div>
+    <div class="labelInput">
+      <label for="song">Song:</label>
+      <input type="text" name="song" id="song"></input>
+    </div>
+    <div class="labelInput">
+      <label for="album">Album:</label>
+      <input type="text" name="album" id="album"></input>
+    </div>
+    <button class="button-enlarger">Add</button>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

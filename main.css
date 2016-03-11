@@ -20,6 +20,7 @@ body {
   padding: 10px;
   background: #FFB4B0;
   border-radius: 10px;
+  overflow: hidden;
 }
 .navItem {
   border:2px solid #b27f87;
@@ -61,6 +62,7 @@ nav a {
   margin-top:5px;
   -webkit-flex: 1 0 0;
   flex: 1 0 0;
+  overflow: hidden;
 }
 
 .filterItem {
@@ -120,6 +122,7 @@ nav a {
   margin-top:5px;
   -webkit-flex: 2 0 0; 
   flex: 2 0 0; 
+  overflow: auto;
 }
 
 .song {
@@ -127,6 +130,10 @@ nav a {
   border-radius: 10px;
   background-color: #fefde5;
   height: 90px;
+}
+
+.song:nth-child(2n+0){
+  background-color: #F5FFFA;
 }
 
 .songList a {
@@ -161,4 +168,35 @@ nav a {
   width: 60%;
   height: 30px;
   margin-top: 5%;
+}
+
+
+/* ---- Add music section ---- */
+.button-enlarger {
+  font-size: 26px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.addSongs {
+  width: 35%;
+  text-align: center;
+  margin: auto;
+}
+
+.labelInput {
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.labelInput input {
+  line-height: 24px;
+}
+
+/* --- hide section css ---*/
+
+.hidden {
+  display: none;
 }
