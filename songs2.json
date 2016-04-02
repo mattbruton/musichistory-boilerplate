@@ -1,0 +1,19 @@
+{
+  "songs": [{
+    "title": "Welcome to the Jungle",
+    "artist": "Guns & Roses",
+    "album": "Appetite for Destruction"
+  }, {
+    "title": "Ironic",
+    "artist": "Alanis Morrisette",
+    "album": "Jagged Little Pill"
+  }, {
+    "title": "Song",
+    "artist": "Artist",
+    "album": "Album"
+  }, {
+    "title": "Song",
+    "artist": "Artist",
+    "album": "Album"
+  }]
+}
