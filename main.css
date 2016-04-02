@@ -162,3 +162,27 @@ nav a {
   height: 30px;
   margin-top: 5%;
 }
+
+.button-enlarger {
+   font-size: 26px;
+   width: 200px;
+   border-radius: 10px;
+   margin: 0 auto;
+ }
+ 
+ .addSongs {
+   width: 35%;
+   text-align: center;
+   margin: auto;
+ }
+ 
+ .labelInput {
+   display: block;
+   padding: 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .labelInput input {
+   line-height: 24px;
+ }
+ 

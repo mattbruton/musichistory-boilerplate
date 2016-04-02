@@ -1,0 +1,19 @@
+{
+  "songs": [{
+    "title": "Nights on Broadway",
+    "artist": "The Bee Gees",
+    "album": "Main Course"
+  }, {
+    "title": "Legs",
+    "artist": "ZZ Top",
+    "album": "Eliminator"
+  }, {
+    "title": "The Logical Song",
+    "artist": "Supertramp",
+    "album": "Breakfast in America"
+  }, {
+    "title": "Another Brick in the Wall",
+    "artist": "Pink Floyd",
+    "album": "The Wall"
+  }]
+}

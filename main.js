@@ -1,5 +1,3 @@
-var addBtn = document.getElementById('addBtn');
-var listBtn = document.getElementById('listBtn');
 var songList = document.getElementById('songList')
 var mainContentElement = document.getElementById('mainContent');
 var addSongsElement = document.getElementById('addSongs');
@@ -8,25 +6,22 @@ var songEl= document.getElementById('song');
 var albumEl= document.getElementById('album');
 var songAddBtn = document.getElementById('songAddBtn');
 
-window.addEventListener("load", function() {
+$(document).ready(function() {
   mainContentElement.setAttribute("style", "display: flex");
   addSongsElement.setAttribute("style", "display:none");
 });
 
-
-addBtn.addEventListener("click", function() {
+$("#addBtn").click(function() {
   mainContentElement.setAttribute("style", "display: none;");
   addSongsElement.setAttribute("style", "display: block");
 });
 
-
-listBtn.addEventListener("click", function() {
+$("#listBtn").click(  function() {
   mainContentElement.setAttribute("style", "display: flex");
   addSongsElement.setAttribute("style", "display:none");
 });
 
-songAddBtn.addEventListener("click", function() {
-
+$("#songAddBtn").click(function() {
   var newSong = "";
   newSong += `<div class="song">`;
   newSong += `<a href="#">${songEl.value}</a>`;
@@ -36,8 +31,8 @@ songAddBtn.addEventListener("click", function() {
   newSong += `</ul>`;
   newSong += `</div>`;
   songList.innerHTML += newSong;
-
 });
+
 
 /*<div class="song">
             <a href="#">Song Name</a>
