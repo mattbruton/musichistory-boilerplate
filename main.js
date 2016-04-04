@@ -43,8 +43,8 @@ $("#songAddBtn").click(function() {
   newSong += `<a href="#">${songEl.value}</a>`;
   newSong += `<button class="delBtn" type="">X</button>`;
   newSong += `<ul class="songInfo"`;
-  newSong += `<li>${artistEl.value}</li>`;
-  newSong += `<li class="songMid">${albumEl.value}</li>`;
+  newSong += `<li>Artist: ${artistEl.value}</li>`;
+  newSong += `<li class="songMid">Album: ${albumEl.value}</li>`;
   newSong += `</ul>`;
   newSong += `</div>`;
   songList.innerHTML += newSong;
@@ -55,7 +55,7 @@ $("#songAddBtn").click(function() {
 $.get('songs1.json', function(songs) {
   for (var i = 0; i < songs.songs.length; i++) {
     $("#songList")
-     .append(`<div class="song" style="min-height: 90px;"><a href="#">${songs.songs[i].title}</a><button class="delBtn" type="">X</button><ul class="songInfo"<li>Artist: ${songs.songs[i].artist}</li><li>Album:${songs.songs[i].album}</li></ul></div>`);
+     .append(`<div class="song" style="min-height: 90px;"><a href="#">${songs.songs[i].title}</a><button class="delBtn" type="">X</button><ul class="songInfo"<li>Artist: ${songs.songs[i].artist}</li><li>Album: ${songs.songs[i].album}</li></ul></div>`);
   }
 }, "json");
 
