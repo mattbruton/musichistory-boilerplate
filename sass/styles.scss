@@ -1,0 +1,85 @@
+body {
+  background-color: #FFEFD1;
+}
+
+.navBar {
+  margin-top: 10%;
+  margin-bottom: 0.4%;
+  background-color: #C76A6F;
+  border-radius: 5px;
+  height: 90px;
+  min-height: 70px;
+}
+
+.nav-pills>li {
+  width: 10%;
+  text-align: center;
+}
+
+.nav-pills>li>a {
+  color: black;
+  justify-content: center;
+  min-height: 100%;
+  padding: 23.5%;
+}
+
+.nav-pills>li>a:hover {
+  background-color: #EEA2A6;
+}
+
+.nav-pills>li.active>a {
+  background-color: #801F24;
+  color: #FFF9ED;
+}
+
+.nav-pills>li.active>a:hover {
+  background-color: #A43F44; 
+  color: #222616;
+}
+
+nav {
+  width: 75%;
+  margin: auto;
+}
+
+.filterItem {
+  text-align: center;
+  margin: auto;
+}
+
+.filterItem select {
+  width: 60%;
+}
+
+.filterItem li {
+  text-align: left;
+  list-style: none;
+}
+
+.blueDiv {
+  background-color: #F2C6A5;
+  margin-left: 12.5%;
+  margin-right: 0.25%;
+  width: 24%;
+  height: 450px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.yellowDiv {
+  background-color: #F2D7A5;
+  width: 50.666%;
+  margin-right: 0.25%;
+  height: 450px;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+#moreDiv {
+  text-align: center;
+}
+
+#addSongs {
+  text-align: center;
+}

@@ -27,7 +27,7 @@ in JSON files, and an area for user to filter songs based on selected criteria. 
     blueDiv.show();
     yellowDiv.show();
     moreDiv.show();
-  };
+  }
 
 /* Add Music View should hide all primary content and display a form which the user can utilitze to 
 enter new songs into the app. */
@@ -37,7 +37,7 @@ enter new songs into the app. */
     blueDiv.hide();
     yellowDiv.hide();
     moreDiv.hide();
-  };
+  }
 
 /* When new json files are loaded, their contents are given an id and pushed into the song holder array and then the append function is run to populate the DOM. */
 
@@ -47,8 +47,8 @@ enter new songs into the app. */
       songHolder.push(i);
     });
     appendSongs();
-    console.log(songHolder)
-  };
+    console.log(songHolder);
+  }
 
 // function that is responsible for appending each item in songHolder array to the DOM. clears the DOM and then 
 // populates with current array.
@@ -58,7 +58,7 @@ enter new songs into the app. */
     songHolder.forEach(function(i){
       songList.append(`<div id="${i.id}"><h1>${i.title}</h1><ul><li>${i.album}</li><li>${i.artist}</li></ul><button type="" class="del">Remove</button></div>`);
     });
-  };
+  }
 
 /* On page load, ListMusicView is shown */
 
@@ -74,7 +74,7 @@ enter new songs into the app. */
         }
       }
       appendSongs();
-    };
+    }
   });
 
 
@@ -84,7 +84,7 @@ $("#songAddBtn").click(function() {
       title: `${$('#song').val()}`,
       album: `${$('#album').val()}`,
       id: `${songList.length++}`
-    })
+    });
     $('#artist').val("");
     $('#song').val("");
     $('#album').val("");
