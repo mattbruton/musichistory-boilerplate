@@ -1,63 +1,121 @@
-var songList = document.getElementById('songList')
-var mainContentElement = document.getElementById('mainContent');
-var addSongsElement = document.getElementById('addSongs');
-var artistEl= document.getElementById('artist');
-var songEl= document.getElementById('song');
-var albumEl= document.getElementById('album');
-var songAddBtn = document.getElementById('songAddBtn');
+"use strict";
 
-// when app first loads, hides the addSongs element and displays the main content.
+let songHolder = [];
 
 $(document).ready(function() {
-  mainContentElement.setAttribute("style", "display: flex");
-  addSongsElement.setAttribute("style", "display:none");
-});
 
-// when Add Music button is pressed, hides main content area of page and shows Add Songs element.
+// Variables to be used later in file
 
-$("#addBtn").click(function() {
-  mainContentElement.setAttribute("style", "display: none;");
-  addSongsElement.setAttribute("style", "display: block");
-});
+  let addSongs = $("#addSongs");
+  let yellowDiv = $(".yellowDiv");
+  let blueDiv= $(".blueDiv");
+  let moreDiv = $("#moreDiv");
+  let songList = $("#songList");
+  let albumField = $("#album");
+  let artistField = $("#artist");
+  let songField = $("#song");
+  let songAddBtn = $("#songAddBtn");
 
-// when List Music is pressed, hides the Add Songs element and displays Main Content area.
+  
+// CODE FOR VIEW SELECTION
 
-$("#listBtn").click(  function() {
-  mainContentElement.setAttribute("style", "display: flex");
-  addSongsElement.setAttribute("style", "display:none");
-});
+/* List Music View should be the default view for the app, which displays information contained
+in JSON files, and an area for user to filter songs based on selected criteria. */
 
-// Removes Song if delete button is pressed.
-
-$(".songList").click(function(event) {
-  if (event.target.classList.contains("delBtn")){ 
-    event.target.parentNode.remove();
+  function listMusicView(){
+    addSongs.hide();
+    blueDiv.show();
+    yellowDiv.show();
+    moreDiv.show();
   };
-});
 
-// function to add new song through 'Add Music' section of app.
+/* Add Music View should hide all primary content and display a form which the user can utilitze to 
+enter new songs into the app. */
+
+  function addMusicView() {
+    addSongs.show();
+    blueDiv.hide();
+    yellowDiv.hide();
+    moreDiv.hide();
+  };
+
+/* When new json files are loaded, their contents are given an id and pushed into the song holder array and then the append function is run to populate the DOM. */
+
+  function pushSongs(songs){
+    songs.songs.forEach(function(i) {
+      i.id = songList.length++;
+      songHolder.push(i);
+    });
+    appendSongs();
+    console.log(songHolder)
+  };
+
+// function that is responsible for appending each item in songHolder array to the DOM. clears the DOM and then 
+// populates with current array.
+
+  function appendSongs() {
+    songList.html("");
+    songHolder.forEach(function(i){
+      songList.append(`<div id="${i.id}"><h1>${i.title}</h1><ul><li>${i.album}</li><li>${i.artist}</li></ul><button type="" class="del">Remove</button></div>`);
+    });
+  };
+
+/* On page load, ListMusicView is shown */
+
+  listMusicView();
+
+  /* function to delete songs -- upon clicking the delete button within any song, if the id of the parent of the button equals the id key in the songHolder array, it removes that item from the array. then appends the newly modified array back into the DOM. */
+
+  songList.click(function(e) {
+    if(e.target.classList == "del") {
+      for(var i = 0; i < songHolder.length; i++) {
+        if(songHolder[i].id == e.target.parentNode.id) {
+          songHolder.splice(i, 1);
+        }
+      }
+      appendSongs();
+    };
+  });
+
 
 $("#songAddBtn").click(function() {
-  var newSong = "";
-  newSong += `<div class="song" style="min-height: 90px;">`;
-  newSong += `<a href="#">${songEl.value}</a>`;
-  newSong += `<button class="delBtn" type="">X</button>`;
-  newSong += `<ul class="songInfo"`;
-  newSong += `<li>Artist: ${artistEl.value}</li>`;
-  newSong += `<li class="songMid">Album: ${albumEl.value}</li>`;
-  newSong += `</ul>`;
-  newSong += `</div>`;
-  songList.innerHTML += newSong;
+    songHolder.push({
+      artist: `${$('#artist').val()}`,
+      title: `${$('#song').val()}`,
+      album: `${$('#album').val()}`,
+      id: `${songList.length++}`
+    })
+    $('#artist').val("");
+    $('#song').val("");
+    $('#album').val("");
+    appendSongs();
+  });
+
+/* Event listeners for View functions above */
+  
+
+  $("#addMusicBtn").click(function() {
+    addMusicView();
+  });
+
+
+  $("#listMusicBtn").click(function() {
+    listMusicView();
+  });
+
+
+  $("#addMore").click(function(){
+    $.ajax({
+      url: "songs2.json",
+      success: pushSongs
+    });
+    $("#addMore").hide();
+  });
+
+  
+  $.ajax({
+    url: "songs1.json",
+    success: pushSongs
+  });
+
 });
-
-// Gets contents of song1.json and loads them when starting up app.
-
-$.get('songs1.json', function(songs) {
-  for (var i = 0; i < songs.songs.length; i++) {
-    $("#songList")
-     .append(`<div class="song" style="min-height: 90px;"><a href="#">${songs.songs[i].title}</a><button class="delBtn" type="">X</button><ul class="songInfo"<li>Artist: ${songs.songs[i].artist}</li><li>Album: ${songs.songs[i].album}</li></ul></div>`);
-  }
-}, "json");
-
-// waiting to fix flexbox before tackling the step where i add the second json file on click
-// $.get('songs2.json');

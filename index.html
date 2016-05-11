@@ -1,19 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="flex.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Music History</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
   <nav>
-    <ul class="nav">
-      <li class="navItem" id="listBtn"><a href="#">List Music</a></li>
-      <li class="navItem" id="addBtn"><a href="#">Add Music</a></li>
-    </ul>
+    <div class="navBar">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active" id="listMusicBtn"><a href="#">List Music</a></li>
+        <li role="presentation"><a href="#" id="addMusicBtn">Add Music</a></li>
+      </ul>
+    </div>
   </nav>
-  <div class="mainContent" id="mainContent">
-    <div class="filter" class="mainItem">
+  
+    <div class="container blueDiv col-sm-3">
+      <div class="mainContent" id="mainContent">
+      <div class="filter" class="mainItem">
       <form class="filterItem">
         <p>Song length:</p>
         <input type="range" class="range">
@@ -42,21 +49,30 @@
         <p>Genre:</p>
           <div>
             <ul class="checkbox">
-             <li class="cbItem"><input type="checkbox">Rock</li>
-             <li class="cbItem"><input type="checkbox">Pop</li>
-             <li class="cbItem"><input type="checkbox">Blues</li>
-             <li class="cbItem"><input type="checkbox">Classical</li>
-             <li class="cbItem"><input type="checkbox">Jazz</li>
-             <li class="cbItem"><input type="checkbox">Hip hop</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Rock</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Pop</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Blues</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Classical</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Jazz</li>
+             <li class="cbItem col-sm-6"><input type="checkbox">Hip hop</li>
             </ul>
           </div>
       </form>
       <a href="#">Filter</a>
     </div>
-    <div class="songList" id="songList">
     </div>
   </div>
-  <div class="addSongs" id="addSongs">
+
+
+    <div class="container yellowDiv col-sm-9">
+      <div class="songList" id="songList">
+      </div>
+    </div>
+
+    <div class="container buttonHolder col-sm-12" id="moreDiv">
+      <button type="" id="addMore">Load More Songs </button>
+    </div>
+    <div class="container addSongs col-sm-12" id="addSongs">
      <div class="labelInput">
        <label for="artist">Artist:</label>
        <input type="text" name="artist" id="artist"></input>
@@ -69,10 +85,12 @@
        <label for="album">Album:</label>
        <input type="text" name="album" id="album"></input>
      </div>
-     <button class="button-enlarger" id="songAddBtn">Add</button>
+     <button id="songAddBtn">Add</button>
    </div>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <script type="text/javascript" src="main.js"></script>
-  
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
