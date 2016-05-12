@@ -4,7 +4,6 @@
   let yellowDiv = $(".yellowDiv");
   let blueDiv= $(".blueDiv");
   let moreDiv = $("#moreDiv");
-  let songList = $("#songList");
 
   // CODE FOR VIEW SELECTION
 
