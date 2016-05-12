@@ -1,25 +1,33 @@
 body {
-  background-color: #FFEFD1; }
+  background-color: #FFEFD1;
+  text-align: center; }
 
 .navBar {
   margin-top: 10%;
   margin-bottom: 0.4%;
   background-color: #C76A6F;
-  border-radius: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   height: 90px;
   min-height: 70px; }
 
-.nav-pills > li {
-  width: 10%;
-  text-align: center; }
+li {
+  list-style-type: none;
+  margin-right: 6%; }
 
-.nav-pills > li > a {
+.nav-pills li {
+  width: 10%; }
+
+.nav-pills li a {
   color: black;
   justify-content: center;
   min-height: 100%;
   padding: 23.5%; }
 
-.nav-pills > li > a:hover {
+.nav-pills li a:hover {
   background-color: #EEA2A6; }
 
 .nav-pills > li.active > a {
@@ -35,15 +43,12 @@ nav {
   margin: auto; }
 
 .filterItem {
-  text-align: center;
   margin: auto; }
-
-.filterItem select {
-  width: 60%; }
-
-.filterItem li {
-  text-align: left;
-  list-style: none; }
+  .filterItem select {
+    width: 60%; }
+  .filterItem li {
+    text-align: left;
+    list-style: none; }
 
 .blueDiv {
   background-color: #F2C6A5;
@@ -52,6 +57,10 @@ nav {
   width: 24%;
   height: 450px;
   display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px; }
 
 .yellowDiv {
@@ -60,11 +69,9 @@ nav {
   margin-right: 0.25%;
   height: 450px;
   display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   overflow: scroll; }
-
-#moreDiv {
-  text-align: center; }
-
-#addSongs {
-  text-align: center; }
