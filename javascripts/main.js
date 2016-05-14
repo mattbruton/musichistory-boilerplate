@@ -36,10 +36,10 @@ $(document).ready(() => {
 
     $('#songList').click(e => {
         if (e.target.classList.contains("del")) {
-            const id = e.target.closest('div').id;
+            const songId = e.target.closest('div').id;
 
             $.ajax({
-                url: `https://dazzling-fire-3629.firebaseio.com/songs/${id}.json`,
+                url: `https://dazzling-fire-3629.firebaseio.com/songs/${songId}.json`,
                 type: "DELETE"
             }).done(() => {
                 loadPage();
