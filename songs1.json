@@ -1,23 +1,44 @@
 {
-  "songs": [{
-    "title": "Nights on Broadway",
-    "artist": "The Bee Gees",
-    "album": "Main Course",
-    "id": 0
-  }, {
-    "title": "Sharp Dressed Man",
-    "artist": "ZZ Top",
-    "album": "Eliminator",
-    "id": 1
-  }, {
-    "title": "The Logical Song",
-    "artist": "Supertramp",
-    "album": "Breakfast in America",
-    "id": 2
-  }, {
-    "title": "Another Brick in the Wall",
-    "artist": "Pink Floyd",
-    "album": "The Wall",
-    "id": 3
-  }]
+  "songs": {
+    "nights" : {
+      "title": "Nights on Broadway",
+      "artist": "The Bee Gees",
+      "album": "Main Course" 
+    }, 
+    "sharp" : {
+      "title": "Sharp Dressed Man",
+      "artist": "ZZ Top",
+      "album": "Eliminator"  
+    }, 
+    "logical": {
+      "title": "The Logical Song",
+      "artist": "Supertramp",
+      "album": "Breakfast in America" 
+    }, 
+    "brick": {
+      "title": "Another Brick in the Wall",
+      "artist": "Pink Floyd",
+      "album": "The Wall"
+    },
+    "jungle": {
+      "title": "Welcome to the Jungle",
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction"
+  },
+    "ironic": {
+      "title": "Ironic",
+      "artist": "Alanis Morrisette",
+      "album": "Jagged Little Pill"
+  },
+    "sample": {
+      "title": "Song",
+      "artist": "Artist",
+      "album": "Album"
+  },
+    "sample2": {
+      "title": "Song",
+      "artist": "Artist",
+      "album": "Album"
+   }
+  }
 }

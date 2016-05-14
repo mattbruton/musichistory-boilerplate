@@ -3,7 +3,6 @@
   let addSongs = $("#addSongs");
   let yellowDiv = $(".yellowDiv");
   let blueDiv= $(".blueDiv");
-  let moreDiv = $("#moreDiv");
 
   // CODE FOR VIEW SELECTION
 
@@ -14,7 +13,6 @@ let listMusicView = () => {
     addSongs.hide();
     blueDiv.show();
     yellowDiv.show();
-    moreDiv.show();
   };
 
 /* Add Music View should hide all primary content and display a form which the user can utilitze to 
@@ -24,7 +22,6 @@ let addMusicView = () => {
     addSongs.show();
     blueDiv.hide();
     yellowDiv.hide();
-    moreDiv.hide();
   };
 
   module.exports = {
