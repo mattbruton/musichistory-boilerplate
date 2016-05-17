@@ -3,6 +3,7 @@
   let addSongs = $("#addSongs");
   let yellowDiv = $(".yellowDiv");
   let blueDiv= $(".blueDiv");
+  let editSongs = $('#editSongs');
 
   // CODE FOR VIEW SELECTION
 
@@ -11,6 +12,7 @@ in JSON files, and an area for user to filter songs based on selected criteria. 
 
 let listMusicView = () => {
     addSongs.hide();
+    editSongs.hide();
     blueDiv.show();
     yellowDiv.show();
   };
@@ -19,12 +21,21 @@ let listMusicView = () => {
 enter new songs into the app. */
 
 let addMusicView = () => {
+    editSongs.hide();
     addSongs.show();
     blueDiv.hide();
     yellowDiv.hide();
   };
 
+let editMusicView = () => {
+    editSongs.show();
+    addSongs.hide();
+    blueDiv.hide();
+    yellowDiv.hide();
+}
+
   module.exports = {
+    editMusicView,
     listMusicView,
     addMusicView
   };

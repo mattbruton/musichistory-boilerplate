@@ -1,7 +1,7 @@
 "use strict";
 
 let views = require('./views.js');
-
+let idHold = "";
 $(document).ready(() => {
 
     // Variables to be used later in file
@@ -23,7 +23,7 @@ $(document).ready(() => {
             const currentSong = songs[song];
             songList.append(`<div id="${song}" class="song"><h1>${currentSong.title}</h1><ul><li>
             Album: ${currentSong.album}</li><li>Artist: ${currentSong.artist}</li></ul>
-            <button type="" class="del">Remove</button></div>`);
+            <button type="" class="del">Remove</button><button type="" class="edit">Edit</button></div>`);
         }
     };
 
@@ -45,7 +45,63 @@ $(document).ready(() => {
                 loadPage();
             });
         }
+
+        if (e.target.classList.contains("edit")) {
+            const songId = e.target.closest('div').id;
+
+            $.ajax({
+                url: `https://dazzling-fire-3629.firebaseio.com/songs/${songId}.json`,
+                type: "GET",
+                dataType: "jsonp",
+                success: function (data) {
+                    idHold = songId;
+                    console.log(idHold)
+                    $('#edit-artist').val(data.artist);
+                    $('#edit-song').val(data.title);
+                    $('#edit-album').val(data.album);
+                }
+            }).done(() => {
+                views.editMusicView();
+
+            });
+        }
     });
+
+
+    $('#songEditBtn').click(function() {
+        let editTitle = $('#edit-song').val();
+        let editAlbum = $('#edit-album').val();
+        let editArtist = $('#edit-artist').val();
+        console.log("clikcing")
+
+        $.ajax({
+            type: 'POST', // Use POST with X-HTTP-Method-Override or a straight PUT if appropriate.
+            dataType: 'json', // Set datatype - affects Accept header
+            url: `https://dazzling-fire-3629.firebaseio.com/songs/${idHold}.json`, // A valid URL
+            headers: {"X-HTTP-Method-Override": "PUT"}, // X-HTTP-Method-Override set to PUT.
+            data: `{"title": "${editTitle}", "artist": "${editArtist}", "album": "${editAlbum}"}` // Some data e.g. Valid JSON as a string
+        }).done(() => {
+            $('#edit-album').val("");
+            $('#edit-song').val("");
+            $('#edit-artist').val("");
+            views.listMusicView();
+            loadPage();
+    })
+    })
+    // $('#songList').click(e => {
+    //     if (e.target.classList.contains("edit")) {
+    //         const songId = e.target.closest('div').id;
+
+    //         $.ajax({
+    //             url: `https://dazzling-fire-3629.firebaseio.com/songs/${songId}.json`,
+    //             type: "GET",
+    //         }).done(() => {
+    //             views.editMusicView();
+    //             $('#edit-artist').val(song.artist);
+    //             // loadPage();
+    //         });
+    //     }
+    // });
 
     $("#songAddBtn").click(() => {
 
